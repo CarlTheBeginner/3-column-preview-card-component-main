@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/* CSS VARIABLES */
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+/* CSS RESETS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+}
+
+/* STYLING */
+.card-container {
+  min-height: 100vh;
+  background: var(--very-light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-content {
+  width: 140vh;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.card {
+  padding: 3.5rem 2rem;
+  color: var(--transparent-white);
+}
+
+.card-orange {
+  background: var(--bright-orange);
+}
+
+.card-cyan {
+  background: var(--dark-cyan);
+}
+
+.card-dark-cyan {
+  background: var(--very-dark-cyan);
+}
+
+.card-circle {
+  margin-bottom: 2rem;
+}
+
+.header {
+  font-size: 2.5rem;
+  font-family: 'Big Shoulders Display', cursive;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  color: var(--very-light-gray);
+  font-weight: 700;
+}
+
+.text {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 3.5rem;
+}
+
+.card-btn:link,
+.card-btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1rem 2.6rem;
+  background: var(--very-light-gray);
+  border-radius: 2rem;
+  font-size: 1rem;
+  text-transform: capitalize;
+  border: 2px solid;
+  transition: all 0.5s ease;
+}
+
+.text-orange {
+  color: var(--bright-orange);
+}
+
+.text-orange:hover {
+  border-color: white;
+  background: var(--bright-orange);
+  color: white;
+}
+
+.text-cyan {
+  color: var(--dark-cyan);
+}
+
+.text-cyan:hover {
+  border-color: white;
+  background: var(--dark-cyan);
+  color: white;
+}
+
+.text-dark-cyan {
+  color: var(--very-dark-cyan);
+}
+
+.text-dark-cyan:hover {
+  border-color: white;
+  background: var(--very-dark-cyan);
+  color: white;
+}
+
+@media screen and (max-width: 576px) {
+  .card-content {
+    grid-template-columns: repeat(1, 1fr);
+    width: 80vw;
+    margin: 4rem auto;
+  }
+
+  .card {
+    padding: 3.5rem 3.2rem;
+  }
+
+  .header {
+    font-size: 3.2rem;
+  }
+
+  .text {
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .card-btn:link,
+  .card-btn:visited {
+    font-size: 1.2rem;
+  }
+}
